@@ -1,1 +1,4 @@
-# clear-fb-recommendation-chrome-extension
+# A Facebook "Neked javasoltak" bejegyzések elrejtése
+## Chrome extension
+
+
