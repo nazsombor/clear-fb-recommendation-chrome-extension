@@ -12,6 +12,9 @@ Ez a böngésző bővítmény elrejti az összes olyan Facebook-os bejegyzést, 
 1. Tömörített mappa letöltése
 ![](letoltes.png)
 2. Kicsomagolás egy helyre, ahol bármikor elérhető
+![](kicsomagolas.png)
 3. Hozzáadás a Chrome böngészőhöz
+![](telepites.png)
+![](telepites2.png)
 
-Hajrá!
+Innentől csak frissíteni kell a facebook oldalad és kész is!
