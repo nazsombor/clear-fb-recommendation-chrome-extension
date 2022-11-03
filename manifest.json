@@ -5,7 +5,7 @@
 
     "content_scripts": [
         {
-          "matches": ["https://www.facebook.com/*"],
+          "matches": ["https://www.facebook.com/"],
           "js": ["content-script.js"]
         }
       ]
