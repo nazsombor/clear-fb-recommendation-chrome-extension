@@ -37,6 +37,10 @@ function getArticleType(article) {
         }
     }
 
+    if(!header_section){
+        return
+    }
+
     var title_and_type = header_section.children[1].children[0]
     var type_root = title_and_type.children[1]
 
