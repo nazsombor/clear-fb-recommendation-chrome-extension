@@ -1,5 +1,3 @@
-### Frissítés: a megújult változat a hirdetéseket is eltakarja
-
 # A Facebook "Neked javasoltak" bejegyzések és hirdetések elrejtése
 ## Chrome extension
 Ez a böngésző bővítmény elrejti az összes olyan Facebook-os bejegyzést, ami nem ismerősőktől, vagy követett csoportoktól és oldalaktól származnak, illetve a hirdetéseket. Azok számára javasolt, akik úgy érzik nem ütik meg a kívánt színvonalat ezek a bejegyzések.
