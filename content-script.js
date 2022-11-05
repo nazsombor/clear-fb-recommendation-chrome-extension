@@ -1,8 +1,8 @@
-// This function finds the list of HTML nodes that are in the article feed at facebook.com.
-// Any other facebook page, eg. the user page gives an empty list, so no action is taken.
+// This function finds the list of article HTML nodes that are in the feed at facebook.com.
+// Any other facebook page, eg. the user information page gives an empty list, so no action is taken.
 // I only let this script to be initialized on other facebook pages too, as there is no real
 // redirection between facebook pages, just the url changes which doesn't trigger the browser
-// to initialize the script on the home page when it was navigated from other facebook pages.
+// to initialize the script on the home page when it was navigated from another facebook page.
 function getArticles() {
     for (h3 of document.getElementsByTagName("h3")) {
         if (h3.innerHTML === "Hírfolyambejegyzések") {
@@ -77,12 +77,12 @@ function getArticleType(article) {
 setInterval(() => {
     for (article of getArticles()) {
         // To achieve a better performance every article is given with a custom HTML attribute 'reviewed' that
-        // is set to true. Any article that has this attribute is skipped, so they only categroized once.
+        // is set to "true". Any article that has this attribute is skipped, so they only categroized once.
         if (article.getAttribute('reviewed')) continue
 
         switch (getArticleType(article)) {
             // In case, the article is categorized as AD or RECOMMENDATION,
-            // the "display" style attribute is set to none
+            // the "display" style attribute is set to "none"
             case Type.AD:
             case Type.RECOMMENDATION:
                 article.style.display = "none"
