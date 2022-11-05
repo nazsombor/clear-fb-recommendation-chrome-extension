@@ -74,7 +74,6 @@ function getArticleType(article) {
     } catch (error) {
         // Any error may occur in cases where the article structure dosen't much the normal ones.
         // We can assume they are not even articles but friend recommendations, etc.
-        console.log(error)
         return
     }
 
