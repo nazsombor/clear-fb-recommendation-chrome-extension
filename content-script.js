@@ -27,7 +27,7 @@ function getArticleType(article) {
             .children[0].children[0].children[0]
 
         // The article consists of a header, a body and a footer.
-        // This "for" loop gets the header and stops before checking the body.
+        // This "for" loop gets the header and stops without checking the body or the footer.
         var header_section
         for (div of walk_in_11.children) {
             if (div.children.length == 0) continue
