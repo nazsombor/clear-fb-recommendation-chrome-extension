@@ -6,7 +6,7 @@ Ez a böngésző bővítmény elrejti az összes olyan Facebook-os bejegyzést, 
 
 #### Fontos: mivel ez egy olyan bővítmény, ami a facebook-ozásodra rálát és módosítja, érdemes ránézni a kódra.
 
-- A manifest.json fájl minden bővítmény alapja. Itt lehet meghatározni, hogy milyen jellegű hozzáférést kér a bővítmény a böngészőtől. Látható, hogy egy "content script"-et futtat le minden alkalommal, ha a facebook.com-ot megnyitod. Tehát nem tárol semmilyen adatot, és végképp nem küld nekem adatokat titokban. További olvasás a chrome extension-ekről az alábbi [linken](https://developer.chrome.com/docs/extensions/mv3/manifest/) lehet.
+- A manifest.json fájl minden bővítmény alapja. Itt lehet meghatározni, hogy milyen jellegű hozzáférést kér a bővítmény a böngészőtől. Látható, hogy egy "content script"-et futtat le minden alkalommal, ha a facebook.com-ot megnyitod. Tehát nem tárol semmilyen adatot, és végképp nem küld nekem adatokat titokban. A chrome extension-ekről az alábbi [linken](https://developer.chrome.com/docs/extensions/mv3/manifest/) lehet többet olvasni.
 - A content_script.js minden 1000 milliszekundban megkeresi a hírfolyambejegyzéseket és aminek a fejléce "Neked javasoltak" szövegű vagy hirdetés, azt láthatatlanná teszi.
 
 ### Telepítés
