@@ -33,7 +33,7 @@ function getArticleType(article) {
         for (div of walk_in_11.children) {
             if (div.children.length == 0) continue
 
-            // If the header includes the "Neked javasoltak" text, it is categorized as RECOMMENDATION
+            // If the header includes the "Neked javasoltak" text, it can be already categorized as RECOMMENDATION
             if (div.innerHTML.includes(Type.RECOMMENDATION)) {
                 return Type.RECOMMENDATION
             }
