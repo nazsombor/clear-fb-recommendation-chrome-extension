@@ -22,8 +22,7 @@ var Type = {
 function getArticleType(article) {
     try {
         // The interesting part of the article starts quite deep in the node tree.
-        var walk_in_11
-        walk_in_11 = article.children[0].children[0].children[0]
+        var walk_in_11 = article.children[0].children[0].children[0]
             .children[0].children[0].children[0].children[0].children[0]
             .children[0].children[0].children[0]
 
