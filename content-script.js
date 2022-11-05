@@ -26,6 +26,7 @@ function getArticleType(article) {
             .children[0].children[0].children[0].children[0].children[0]
             .children[0].children[0].children[0]
 
+
         // Then we still need to find the meaningful part at this level.
         var header_section
         for (div of walk_in_11.children) {
