@@ -26,19 +26,27 @@ function getArticleType(article) {
             .children[0].children[0].children[0].children[0].children[0]
             .children[0].children[0].children[0]
 
-        // The article consists of a header, a body and a footer.
-        // This "for" loop gets the header and stops before checking the body.
+        // Then we still need to find the meaningful part at this level.
         var header_section
         for (div of walk_in_11.children) {
+            // A div node might be empty
             if (div.children.length == 0) continue
 
-            // If the header includes the "Neked javasoltak" text, it can be already categorized as RECOMMENDATION
-            if (div.innerHTML.includes(Type.RECOMMENDATION)) {
-                return Type.RECOMMENDATION
-            }
 
+            // If the first child of the div node has 4 children, the is the meaningful part starts there.
             if (div.children[0].children.length == 4) {
-                header_section = div.children[0].children[1].children[0]
+
+                var meaningful_part = div.children[0]
+
+                // The first part is only visible when it contains the "Neked javasoltak" text.
+                // If it so, then we can already categorize the article as RECOMMENDATION.
+                if (meaningful_part.children[0].innerHTML.includes(Type.RECOMMENDATION)) {
+                    return Type.RECOMMENDATION
+                }
+
+                // Otherwise we found the header in the second child.
+                // (The body would be the third, and the footer the fourth.)
+                header_section = meaningful_part.children[1].children[0]
                 break
             }
         }
@@ -65,6 +73,7 @@ function getArticleType(article) {
     } catch (error) {
         // Any error may occur in cases where the article structure dosen't much the normal ones.
         // We can assume they are not even articles but friend recommendations, etc.
+        console.log(error)
         return
     }
 
