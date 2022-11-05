@@ -2,7 +2,7 @@
 // Any other facebook page, eg. the user page gives an empty list, so no action is taken.
 // I only let this script to be initialized on other facebook pages too, as there is no real
 // redirection between facebook pages, just the url changes which doesn't trigger the browser
-// to initialize it on the home page when it was navigated from other facebook pages.
+// to initialize the script on the home page when it was navigated from other facebook pages.
 function getArticles() {
     for (const h3 of document.getElementsByTagName("h3")) {
         if (h3.innerHTML === "Hírfolyambejegyzések") {
