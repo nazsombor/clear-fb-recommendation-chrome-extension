@@ -4,8 +4,8 @@ Ez a böngésző bővítmény azok számára javasolt, akik úgy érzik nem üti
 
 #### Fontos: mivel ez egy olyan bővítmény, ami a facebook hírfolyamodra lát rá és módosítja, javasolt a forráskód átnézése.
 
-- A manifest.json fájl minden bővítmény alapja. Itt lehet meghatározni, hogy milyen jellegű hozzáférést kér a bővítmény a böngészőtől. Látható, hogy egy "content script"-et futtat le minden alkalommal, ha a facebook.com-ot megnyitod.
-- A content_script.js másodpercenként kategorizálja az új hírfolyambejegyzéseket, és a "Neked javasoltak"-at és hirdetéseket láthatatlanná teszi. Itt érdemes megnézni, hogy nem küld el titokban adatokat, mivel nincs ["fetch()" függvény vagy XMLHttpRequest osztály](https://reqbin.com/code/javascript/wzp2hxwh/javascript-post-request-example) használatban.
+- A [manifest.json](https://github.com/nazsombor/clear-fb-recommendation-chrome-extension/blob/main/manifest.json) fájl minden bővítmény alapja. Itt lehet meghatározni, hogy milyen jellegű hozzáférést kér a bővítmény a böngészőtől. Látható, hogy egy "content script"-et futtat le minden alkalommal, ha a facebook.com-ot megnyitod.
+- A [content_script.js](https://github.com/nazsombor/clear-fb-recommendation-chrome-extension/blob/main/content_script.js) másodpercenként kategorizálja az új hírfolyambejegyzéseket, és a "Neked javasoltak"-at és hirdetéseket láthatatlanná teszi. Itt érdemes megnézni, hogy nem küld el titokban adatokat, mivel nincs ["fetch()" függvény vagy XMLHttpRequest osztály](https://reqbin.com/code/javascript/wzp2hxwh/javascript-post-request-example) használatban.
 
 ### Telepítés
 
