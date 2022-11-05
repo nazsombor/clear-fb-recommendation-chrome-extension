@@ -1,4 +1,4 @@
-### UPUDATE: Nényány bejegyzés típus miatt megakadt és az utána jövő hirdetéseket nem tudta elrejteni, ez most javítva lett. Ezen felül bár így se okozott látható lassulást a sok görgetés, most ez sem okoz már sebesség változást 
+### UPDATE: Nényány bejegyzés típus miatt megakadt és az utána jövő hirdetéseket nem tudta elrejteni, ez most javítva lett. Ezen felül bár így se okozott látható lassulást a sok görgetés, most ez sem okoz már sebesség változást 
 
 # A Facebook "Neked javasoltak" bejegyzések és hirdetések elrejtése
 ## Chrome extension
