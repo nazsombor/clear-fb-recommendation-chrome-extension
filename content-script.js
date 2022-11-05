@@ -57,7 +57,7 @@ function getArticleType(article) {
         return types.nem_hirdetes
 
     } catch (error) {
-        //is not an article or unchecked case
+        //this is not an article
         return
     }
 
@@ -65,9 +65,7 @@ function getArticleType(article) {
 
 setInterval(() => {
     for (article of getArticles()) {
-
         if (article.getAttribute('reviewed')) continue
-
         switch (getArticleType(article)) {
             case types.hirdetes:
             case types.neked_javasoltak:
