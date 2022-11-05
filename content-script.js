@@ -4,12 +4,13 @@ function getArticles() {
             return h3.nextSibling.children
         }
     }
+    return []
 }
 
 var types = {
-    hirdetes: "hirdetés",
-    neked_javasoltak: "neked javasoltak",
-    nem_hirdetes: "nem hirdetés"
+    hirdetes: "Hirdetés",
+    neked_javasoltak: "Neked javasoltak",
+    nem_hirdetes: "Nem hirdetés"
 }
 
 function getArticleType(article) {
@@ -24,7 +25,7 @@ function getArticleType(article) {
         for (div of walk_in_11.children) {
             if (div.children.length == 0) continue
 
-            if (div.innerHTML.includes("Neked javasoltak")) {
+            if (div.innerHTML.includes(types.neked_javasoltak)) {
                 return types.neked_javasoltak
             }
 
@@ -37,7 +38,7 @@ function getArticleType(article) {
         var title_and_type = header_section.children[1].children[0]
         var type_root = title_and_type.children[1]
 
-        if (type_root.innerHTML.includes("Hirdetés")) {
+        if (type_root.innerHTML.includes(types.hirdetes)) {
             return types.hirdetes
         }
 
@@ -46,7 +47,7 @@ function getArticleType(article) {
                 var svgContent = ad.getElementsByTagName("use")[0]
                 if (svgContent) {
                     var svgText = document.getElementById(svgContent.href.baseVal.substring(1))
-                    if (svgText.innerHTML == "Hirdetés") {
+                    if (svgText.innerHTML == types.hirdetes) {
                         return types.hirdetes
                     }
                 }
