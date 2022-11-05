@@ -12,7 +12,7 @@ function getArticles() {
     return []
 }
 
-// The type of aticles to categorize.
+// The types of aticles to categorize.
 var Type = {
     AD: "Hirdetés",
     RECOMMENDATION: "Neked javasoltak",
