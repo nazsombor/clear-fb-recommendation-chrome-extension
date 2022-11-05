@@ -52,7 +52,7 @@ function getArticleType(article) {
         }
 
         // This is a trick by FB. The ad's link is pointing to facebook.com until the mouse is hovered over,
-        // but we need to locate it before that can happen. the other trick is that the ad label is not
+        // but we need to locate it before that can happen. The other trick is that the ad label is not
         // constructed at its location, but somewere else, so we need to look it up by its ID.
         var ad_link = date_or_ad_label.getElementsByTagName("a")[0]
         var svgContent = ad_link.getElementsByTagName("use")[0]
