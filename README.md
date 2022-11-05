@@ -17,4 +17,5 @@ Ez a böngésző bővítmény azok számára javasolt, akik úgy érzik nem üti
 ![](telepites.png)
 ![](telepites2.png)
 
+
 Innentől csak frissíteni kell a facebook oldalad és kész is!
