@@ -1,9 +1,33 @@
+// The types of articles to categorize.
+var Type = {
+    AD: "Hirdetés",
+    RECOMMENDATION: "Neked javasoltak",
+    REGULAR: "Nem hirdetés"
+}
+
+// Every second run the following review:
+setInterval(() => {
+    for (article of feed()) {
+        
+        // To achieve a better performance every article is given with a custom HTML attribute 'reviewed' that
+        // is set to "true". Any article that has this attribute is skipped, so they only categroized once.
+        if (article.getAttribute('reviewed')) continue
+
+        switch (typeOf(article)) {
+            // In case, the article is categorized as AD or RECOMMENDATION,
+            // the "display" style attribute is set to "none"
+            case Type.AD:
+            case Type.RECOMMENDATION:
+                article.style.display = "none"
+        }
+
+        article.setAttribute('reviewed', true)
+    }
+}, 1000)
+
+
 // This function finds the list of article HTML nodes that are in the feed at facebook.com.
-// Any other facebook page, eg. the user information page gives an empty list, so no action is taken.
-// I only let this script to be initialized on other facebook pages too, as there is no real
-// redirection between facebook pages, just the url changes which doesn't trigger the browser
-// to initialize the script on the home page when it was navigated from another facebook page.
-function getArticles() {
+function feed() {
     for (h3 of document.getElementsByTagName("h3")) {
         if (h3.innerHTML === "Hírfolyambejegyzések") {
             return h3.nextSibling.children
@@ -12,14 +36,7 @@ function getArticles() {
     return []
 }
 
-// The types of articles to categorize.
-var Type = {
-    AD: "Hirdetés",
-    RECOMMENDATION: "Neked javasoltak",
-    REGULAR: "Nem hirdetés"
-}
-
-function getArticleType(article) {
+function typeOf(article) {
     try {
         // The interesting part of the article starts quite deep in the node tree.
         var walk_in_11 = article.children[0].children[0].children[0]
@@ -82,20 +99,4 @@ function getArticleType(article) {
 
 }
 
-setInterval(() => {
-    for (article of getArticles()) {
-        // To achieve a better performance every article is given with a custom HTML attribute 'reviewed' that
-        // is set to "true". Any article that has this attribute is skipped, so they only categroized once.
-        if (article.getAttribute('reviewed')) continue
 
-        switch (getArticleType(article)) {
-            // In case, the article is categorized as AD or RECOMMENDATION,
-            // the "display" style attribute is set to "none"
-            case Type.AD:
-            case Type.RECOMMENDATION:
-                article.style.display = "none"
-        }
-
-        article.setAttribute('reviewed', true)
-    }
-}, 1000)
