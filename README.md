@@ -9,13 +9,11 @@ Ez a böngésző bővítmény azok számára javasolt, akik úgy érzik nem üti
 
 ### Telepítés
 
-1. Tömörített mappa letöltése
-![](letoltes.png)
-2. Kicsomagolás egy helyre, ahol bármikor elérhető
-![](kicsomagolas.png)
-3. Hozzáadás a Chrome böngészőhöz
-![](telepites.png)
-![](telepites2.png)
-
+1. A tömörített mappát a jobb felső sarokban lévő zöld Code bombbal lehet letölteni
+2. Csomagold ki egy jó helyre pl. a Dokumentumokba
+3. A Chrome böngésző jobb felső sarkában kattints az Extensions gombra, majd a Manage extensions gombra
+4. Kapcsold be a jobb felső sarokban lévő Developer mode-ot
+5. Kattints a Load unpacked gombra
+6. Válaszd ki a clear-fb-recommendation-chrome-extension mappát
 
 Innentől csak frissíteni kell a facebook oldalad és kész is!
