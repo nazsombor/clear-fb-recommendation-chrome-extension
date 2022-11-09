@@ -1,7 +1,7 @@
 # A Facebook "Neked javasoltak" bejegyzések és hirdetések elrejtése
 Ez a böngésző bővítmény azok számára javasolt, akik úgy érzik nem ütik meg a kívánt színvonalat a "Neked javasoltak" bejegyzések és a hirdetések.
 
-- Fontos, a Facebook idővel valószínűleg fejleszt a hírfolyam részen is, amitől lehetséges, hogy megint megjelennek hirdetések. Ha ez megtörténik, töröld a bővítményt, és töltsd le és telepítsd az új verziót. 
+#### Akit érdekel a forráskód:
 - A [manifest.json](https://github.com/nazsombor/clear-fb-recommendation-chrome-extension/blob/main/manifest.json) fájl minden bővítmény alapja. Itt lehet meghatározni, hogy milyen jellegű hozzáférést kér a bővítmény a böngészőtől. Látható, hogy egy "content script"-et futtat le minden alkalommal, ha a facebook.com-ot megnyitod.
 - A [content-script.js](https://github.com/nazsombor/clear-fb-recommendation-chrome-extension/blob/main/content-script.js) másodpercenként kategorizálja az új hírfolyambejegyzéseket, és a "Neked javasoltak"-at és hirdetéseket láthatatlanná teszi. Minden kód részlet mellett szöveges magyarázat van.
 
@@ -13,5 +13,8 @@ Ez a böngésző bővítmény azok számára javasolt, akik úgy érzik nem üti
 4. Kapcsold be a jobb felső sarokban lévő Developer mode-ot
 5. Kattints a Load unpacked gombra
 6. Válaszd ki a clear-fb-recommendation-chrome-extension mappát
+
+### Frissítés
+A Facebook idővel valószínűleg fejleszt a hírfolyam részen is, amitől lehetséges, hogy megint megjelennek hirdetések. Ha ez megtörténik, töröld a bővítményt, és töltsd le és telepítsd az új verziót.
 
 Innentől csak frissíteni kell a facebook oldalad és kész is!
