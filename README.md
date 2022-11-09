@@ -1,4 +1,4 @@
-# A Facebook "Neked javasoltak" bejegyzések és hirdetések elrejtése
+# Facebook Neked javasolt bejegyzések és hirdetések elrejtése
 Ez a böngésző bővítmény azok számára javasolt, akik úgy érzik nem ütik meg a kívánt színvonalat a "Neked javasoltak" bejegyzések és a hirdetések.
 
 ### Forráskód:
