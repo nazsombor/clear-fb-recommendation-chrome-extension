@@ -17,4 +17,4 @@ Ez a böngésző bővítmény azok számára javasolt, akik úgy érzik nem üti
 Ezután csak frissíteni kell a facebook oldalad és kész is!
 
 ### Frissítés
-A Facebook idővel valószínűleg fejleszt a hírfolyam részen is, amitől lehetséges, hogy megint megjelennek hirdetések. Ha ez megtörténik, töröld a bővítményt, és töltsd le és telepítsd az új verziót.
+A Facebook idővel valószínűleg fejleszt a hírfolyam részen is, amitől lehetséges, hogy megint megjelennek hirdetések. Ha ez megtörténik, töröld a bővítményt, töltsd le és telepítsd az új verziót.
