@@ -8,14 +8,15 @@ var Type = {
 // Every second run the following review:
 setInterval(() => {
     for (article of feed()) {
+        
         // To achieve a better performance every article is given with a custom HTML attribute 'reviewed' that
         // is set to "true". Any article that has this attribute is skipped, so they only categroized once.
         if (article.getAttribute('reviewed')) continue
         article.setAttribute('reviewed', true)
         
+        // In case, the article is categorized as AD or RECOMMENDATION,
+        // the "display" style attribute is set to "none"
         switch (typeOf(article)) {
-            // In case, the article is categorized as AD or RECOMMENDATION,
-            // the "display" style attribute is set to "none"
             case Type.AD:
             case Type.RECOMMENDATION:
                 article.style.display = "none"
