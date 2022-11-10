@@ -8,7 +8,6 @@ var Type = {
 // Every second run the following review:
 setInterval(() => {
     for (article of feed()) {
-        
         // To achieve a better performance every article is given with a custom HTML attribute 'reviewed' that
         // is set to "true". Any article that has this attribute is skipped, so they only categroized once.
         if (article.getAttribute('reviewed')) continue
@@ -24,7 +23,6 @@ setInterval(() => {
         article.setAttribute('reviewed', true)
     }
 }, 1000)
-
 
 // This function finds the list of article HTML nodes that are in the feed at facebook.com.
 function feed() {
@@ -43,13 +41,11 @@ function typeOf(article) {
             .children[0].children[0].children[0].children[0].children[0]
             .children[0].children[0].children[0]
 
-
         // Then we still need to find the meaningful part at this level.
         var header_section
         for (div of walk_in_11.children) {
             // A div node might be empty
             if (div.children.length == 0) continue
-
 
             // If the first child of the div node has 4 children, the meaningful part starts there.
             if (div.children[0].children.length == 4) {
@@ -95,7 +91,4 @@ function typeOf(article) {
 
     // Every other article is regular article.
     return Type.REGULAR
-
 }
-
-
