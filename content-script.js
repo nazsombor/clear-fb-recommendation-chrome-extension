@@ -2,7 +2,8 @@
 var Type = {
     AD: "Hirdetés",
     RECOMMENDATION: "Neked javasoltak",
-    REGULAR: "Nem hirdetés"
+    REGULAR: "Nem hirdetés",
+    OTHER: "Nem bejegyzés"
 }
 
 // Every second run the following review:
@@ -36,13 +37,14 @@ function feed() {
 function typeOf(article) {
     try {
         // The interesting part of the article starts quite deep in the node tree.
-        var walk_in_11 = article.children[0].children[0].children[0]
-            .children[0].children[0].children[0].children[0].children[0]
-            .children[0].children[0].children[0]
+        var walk_in_11 = article
+            .children[0].children[0].children[0].children[0]
+            .children[0].children[0].children[0].children[0]
+            .children[0].children[0].children[0].children
 
         // Then we still need to find the meaningful part at this level.
         var header_section
-        for (div of walk_in_11.children) {
+        for (div of walk_in_11) {
             // A div node might be empty
             if (div.children.length == 0) continue
 
@@ -74,9 +76,10 @@ function typeOf(article) {
         // Some ad's link is tricky, the ad label is not constructed at its location,
         // but somewere else, so we need to look it up by its ID.
         var ad_link = date_or_ad_label.getElementsByTagName("a")[0]
-        var svgContent = ad_link.getElementsByTagName("use")[0]
-        if (svgContent) {
-            var svgText = document.getElementById(svgContent.href.baseVal.substring(1))
+        var useSvgElement = ad_link.getElementsByTagName("use")[0]
+        if (useSvgElement) {
+            var contentId = useSvgElement.href.baseVal.substring(1)
+            var svgText = document.getElementById(contentId)
             if (svgText.innerHTML == Type.AD) {
                 return Type.AD
             }
@@ -85,7 +88,7 @@ function typeOf(article) {
     } catch (error) {
         // Any error may occur in cases where the article structure dosen't much the checked ones.
         // These are friend recommendations, etc.
-        return
+        return Type.OTHER
     }
 
     // Every other article is regular article.
