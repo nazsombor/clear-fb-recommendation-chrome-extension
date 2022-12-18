@@ -50,9 +50,9 @@ function typeOf(article) {
             if (div.children.length == 0) continue
 
             // If the first child of the div node has 4 children, the meaningful part starts there.
-            if (div.children[0].children.length == 4) {
+            if (div.children[0].children[0].children.length == 4) {
 
-                var meaningful_part = div.children[0]
+                var meaningful_part = div.children[0].children[0]
 
                 // The first part is only visible when it contains the "Neked javasoltak" text.
                 // If it so, then we can already categorize the article as RECOMMENDATION.
