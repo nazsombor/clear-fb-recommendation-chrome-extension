@@ -1,3 +1,5 @@
+# Frissítés: a fb nem rég változtatott a hírfolyam felépítésén. Ehhez alkalmazkodott a kód is.
+
 # Facebook Neked javasolt bejegyzések és hirdetések elrejtése
 Ez a böngésző bővítmény azok számára javasolt, akik úgy érzik nem ütik meg a kívánt színvonalat a "Neked javasoltak" bejegyzések és a hirdetések.
 
