@@ -49,7 +49,7 @@ function typeOf(article) {
             // A div node might be empty
             if (div.children.length == 0) continue
 
-            // If the first child of the div node has 4 children, the meaningful part starts there.
+            // If the first grand child of the div node has 4 children, the meaningful part starts there.
             if (div.children[0].children[0].children.length == 4) {
 
                 var meaningful_part = div.children[0].children[0]
