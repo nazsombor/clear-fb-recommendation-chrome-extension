@@ -39,7 +39,7 @@ function feed() {
 
 function typeOf(article) {
     try {
-        // More steps required to find the root of content.
+        // More steps are required to find the root of content.
         var root_1 = get_to_the_bottom(article)
         var root_2 = find_div_without_class_but_having_children(root_1)
         var root_3 = get_to_the_bottom(root_2)
