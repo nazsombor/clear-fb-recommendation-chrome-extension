@@ -64,33 +64,27 @@ function typeOf(article) {
     return Type.REGULAR
 }
 
-// If div has more than one children, return div
-// otherwise check the same with the only child of div.
-// This means it goes recursivly down of the child chain
-// until it finds more than one children.
-// It is necessary as FB has many divs inside divs and
-// sometimes they just add one more div layer.
+// If div has more than one children, return div otherwise check the same with the only child of div.
+// This means it goes recursivly down of the child chain until it finds more than one children.
+// It is necessary as FB has many divs inside divs and sometimes they just add one more div layer.
 function get_to_the_bottom(div) {
     if (div.children.length > 1) return div
     return get_to_the_bottom(div.children[0])
 }
 
-// A specific query that I hope will be stable even if FB
-// changes something in the structure
+// A specific query that I hope will be stable even if FB changes something in the structure.
 function find_div_without_class_but_having_children(div) {
     for (child of div.children){
         if (child.classList.length == 0 && child.children.length > 0) return child
     }
 }
 
-// This checks if the very top section of the article
-// contains "Neked Javasoltak" text.
+// This checks if the very top section of the article contains "Neked Javasoltak" text.
 function is_note_section_recommendation(note_section) {
     return note_section.innerHTML.includes(Type.RECOMMENDATION)
 }
 
-// This checks if in the title section
-// instead of the date there is a "Hirdetés" text
+// This checks if in the title section instead of the date there is a "Hirdetés" text.
 function is_title_section_ad(title_section) {
     var title_and_date_or_ad_label = title_section.children[1].children[0]
     var date_or_ad_label = title_and_date_or_ad_label.children[1]
