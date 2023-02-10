@@ -53,15 +53,13 @@ function typeOf(article) {
         if (is_title_section_ad(title_section))
             return Type.AD
         
+        // Every other article is regular article.
         return Type.REGULAR
         
     } catch (error) {
         // These are friend recommendations, etc.
         return Type.OTHER
     }
-
-    // Every other article is regular article.
-    return Type.REGULAR
 }
 
 // If div has more than one children, return div otherwise check the same with the only child of div.
