@@ -10,10 +10,8 @@ var Type = {
 setInterval(() => {
     // Iterate over the articles of the article feed
     for (article of feed()) {
-        // To achieve a better performance every article is
-        // given with a custom HTML attribute 'reviewed' that is
-        // set to "true". Any article that has this attribute is
-        // skipped, so they only categroized once.
+        // To achieve a better performance every article is given with a custom HTML attribute 'reviewed' that is set to "true".
+        // Any article that has this attribute is skipped, so they only categroized once.
         if (article.getAttribute('reviewed')) continue
         article.setAttribute('reviewed', true)
         
