@@ -88,8 +88,7 @@ function is_title_section_ad(title_section) {
         return Type.AD
     }
 
-    // Some ad's link is tricky, the ad label is not constructed at its location,
-    // but somewere else, so we need to look it up by its ID.
+    // Some ad's link is tricky, the ad label is not constructed at its location, but somewere else, so we need to look it up by its ID.
     var ad_link = date_or_ad_label.getElementsByTagName("a")[0]
     var useSvgElement = ad_link.getElementsByTagName("use")[0]
     if (useSvgElement) {
